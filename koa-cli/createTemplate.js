@@ -3,14 +3,13 @@ import path from "path";
 import fs from "fs";
 import { fileURLToPath } from "url";
 import prettier from "prettier";
-/**
- * 使用 ejs 模板
- *  根据条件渲染模板
- */
-
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url)); // ESM没有dirname
 
+/**
+ *  使用 ejs 模板
+ *  根据条件渲染模板
+ */
 export function createIndex(config) {
 
   const templateCode = fs.readFileSync(

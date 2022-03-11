@@ -4,7 +4,7 @@
 
 import fs from 'fs';
 import path from 'path';
-import chalk from 'chalk'
+import chalk from 'chalk' // 控制台颜色
 import { execa } from 'execa';
 import { createIndex, createPackage } from './createTemplate.js'
 import question from './question.js'

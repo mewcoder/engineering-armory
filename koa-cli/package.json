@@ -2,7 +2,7 @@
   "name": "koa-cli",
   "version": "1.0.0",
   "type": "module",
-  "description": "",
+  "description": "koa脚手架",
   "main": "index.js",
   "bin": "./index.js",
   "scripts": {

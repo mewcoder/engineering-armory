@@ -1,5 +1,7 @@
 import inquirer from "inquirer";
 
+// 命令行交互
+
 const packageName = {
   type: "input",
   name: "packageName",
