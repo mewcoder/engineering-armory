@@ -4,7 +4,8 @@
 
 import fs from 'fs';
 import path from 'path';
-import { execa } from "execa";
+import chalk from 'chalk'
+import { execa } from 'execa';
 import { createIndex, createPackage } from './createTemplate.js'
 import question from './question.js'
 
@@ -14,30 +15,27 @@ const answer = await question()
 
 const config = getConfig(answer)
 
-console.log(`=====================`);
 // 1. 创建项目文件夹
-console.log(`创建项目文件夹:${config.packageName}`)
+console.log(chalk.green(`创建项目文件夹:${config.packageName}`))
 fs.mkdirSync(getRootPath())
 
 
 // 2. 创建index.js
-console.log(`创建 index.js`)
+console.log(chalk.green(`创建 index.js`))
 fs.writeFileSync(`${getRootPath()}/index.js`, createIndex(config));
 
 
 // 3. 创建package.json
-console.log(`创建 package.json`)
+console.log(chalk.green(`创建 package.json`))
 fs.writeFileSync(`${getRootPath()}/package.json`, createPackage(config));
 
 
 // 4. 安装依赖
-console.log(`安装依赖`)
+console.log(chalk.green(`安装依赖........`))
 execa("npm i", {
   cwd: getRootPath(), // 指定路径
   stdio: [2, 2, 2], // 子进程控制台输出到父进程
 });
-
-console.log(`=====================`);
 
 function getRootPath() {
   return path.resolve(process.cwd(), config.packageName)
