@@ -1,0 +1,29 @@
+{
+  "name": "cli-lint",
+  "version": "1.0.0",
+  "description": "脚手架-lint",
+  "main": "index.js",
+  "scripts": {
+    "prepare": "husky install",
+    "lint": "lint-staged"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mewcoder/cli-lint.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@commitlint/cli": "^16.2.1",
+    "@commitlint/config-conventional": "^16.2.1",
+    "commitizen": "^4.2.4",
+    "eslint": "^8.11.0",
+    "husky": "^7.0.4",
+    "lint-staged": "^12.3.5",
+    "pre-commit": "^1.2.2"
+  },
+  "lint-staged": {
+    "src/**/*.js": "eslint"
+  }
+}
