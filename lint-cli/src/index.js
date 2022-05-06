@@ -1,3 +1,3 @@
-let lint = 'test'
+let lint = "test";
 
-// console.log(lint)
+console.log(lint);
