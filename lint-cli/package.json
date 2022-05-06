@@ -4,12 +4,8 @@
   "description": "脚手架-lint",
   "main": "index.js",
   "scripts": {
-    "prepare": "cd .. && husky install lint/.husky",
-    "lint": "lint-staged"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/mewcoder/cli-lint.git"
+    "prepare": "cd .. && husky install lint-cli/.husky",
+    "lint": "eslint"
   },
   "keywords": [],
   "author": "",
